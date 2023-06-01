@@ -1,0 +1,89 @@
+<div class="container wrapper">
+  <div class="row wrapper-form">
+    <h1 class="text-center">Registration Form</h1>
+    <p class="text-center">
+      Check validation of all information of your team before submiting the
+      form.You can enter maximum 10 members.
+    </p>
+    <form [formGroup]="mainForm" (ngSubmit)="onSubmit()">
+        <h3>Team captain</h3>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>First and Last Name</mat-label>
+          <input matInput formControlName="fullName" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Birth Date</mat-label>
+          <input formControlName="birthDate" matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input type="number" matInput formControlName="phone" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Team Name</mat-label>
+          <input type="text" matInput formControlName="teamName" />
+        </mat-form-field>
+      </div>
+
+      <ng-container formArrayName="teamMembers">
+        <ng-container
+          *ngFor="let memberForm of teamMembers.controls; let i = index"
+        >
+          <div [formGroupName]="i">
+            <div class="team">
+              <h3>Team member {{ i + 1 }}</h3>
+              <mat-icon class="delete-btn" (click)="deleteMember(i)">
+                delete_forever</mat-icon
+              >
+            </div>
+            <div class="row">
+              <mat-form-field appearance="outline">
+                <mat-label>First and Last Name</mat-label>
+                <input matInput formControlName="memberName" />
+              </mat-form-field>
+            </div>
+            <div class="row">
+              <mat-form-field appearance="outline">
+                <mat-label>Birth Date</mat-label>
+                <input formControlName="memberBirthDate" matInput [matDatepicker]="picker1">
+                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="row">
+              <mat-form-field appearance="outline">
+                <mat-label>Phone</mat-label>
+                <input matInput formControlName="memberPhone" />
+              </mat-form-field>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+      <div class="row">
+        <button class="btn" type="button" (click)="addTeamMember()">
+          Add team member
+        </button>
+      </div>
+      <div class="row">
+        <button [disabled]="!this.mainForm.valid" class="btn" type="submit">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
