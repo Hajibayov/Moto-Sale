@@ -22,6 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CardsComponent } from './cards/cards.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const CUSTOM_DATE_FORMAT = {
   parse: {
@@ -41,6 +43,8 @@ export const CUSTOM_DATE_FORMAT = {
     MessageDialogComponent,
     HeaderComponent,
     HomeComponent,
+    CardsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,135 @@
+footer{
+    width: 100%;
+    background-image: url('https://images.pexels.com/photos/2349891/pexels-photo-2349891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-position: 0 170px;
+    filter: grayscale(100%);
+    background-size: cover;
+    padding: 3em 0;
+    background-attachment: fixed;
+}
+
+.footer-columns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer a:hover {
+    color: gray;
+}
+.footer-title{
+    font-size: 4em;
+    color: white;
+    align-self: center;
+}
+
+.footer-text{
+    color: white;
+}
+.footer-logo img{
+    width: 100px;
+    height: 100px; 
+}
+
+.footer-main{
+    width: 20%;
+}
+
+.footer-header{
+    display: flex;
+}
+
+.footer-list{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-list h3{
+    color: white;
+    font-weight: 700;
+}
+
+.footer-list-item a{
+    color: white;
+}
+
+.last a{
+    color: white;
+}
+
+hr {
+    margin: 2em auto;
+    border: none;
+    height: 5px;
+    width: 95%;
+    color: white;
+    background-color: white; /* Modern Browsers */
+}
+
+.copyright{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+@media (max-width:768px){
+
+    .footer-columns{
+        flex-wrap: wrap;
+    }
+    .footer-main{
+        width: 90%;
+        align-self: center;
+        padding-bottom: 2em;
+    }
+    .footer-list{
+        width: 25%;
+    }
+
+    .last{
+        width: 40%;
+    }
+    .footer-header{
+        justify-content: center;
+    }
+    .footer-text{
+        text-align: center;
+    }
+}
+@media(max-width:1280px){
+    .footer-title{
+        font-size: 2em;
+    }
+}
+
+@media (max-width:425px){
+    .footer-list{
+        width: 100%;
+        text-align: center;
+    }
+    .last{
+        width: 100%;
+        text-align: center;
+    }
+
+    .last h3 {
+        text-align: center;
+    }
+
+    .last ul{
+        justify-self: center;
+        align-self: center;
+    }
+
+    .footer-list-item a{
+        width: 100%;
+    }
+
+    .icons{
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,27 @@
+.background{
+    background-color: #f6f6f6 !important;
+    padding: 50px 0;
+}
+h1{
+    font-family: "Montserrat";
+    font-size: 2rem;
+}
+h3{
+    font-family: "Montserrat";
+    font-size: 1rem;
+}
+mat-card-content{
+    padding-left: 30px;
+}
+img{
+    animation: moveToRight 2s ease-in-out;
+      animation-delay: 1000ms;
+}
+@keyframes moveToRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(300px);
+    }
+  }
