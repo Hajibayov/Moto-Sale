@@ -1,0 +1,76 @@
+ngb-carousel {
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: 120vh;
+  filter: grayscale(100%);
+}
+.carousel-caption {
+  top: 45% !important;
+}
+.carousel-caption h1 {
+  font-family: "Montserrat Bold";
+  color: #fff;
+  font-size: 130px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.carousel-caption h3 {
+  font-family: "Montserrat";
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 36px;
+}
+h3.background {
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    border-top: 2px solid #dfdfdf;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 35%;
+    z-index: -1;
+  }
+}
+span {
+  background: transparent;
+  padding: 0 15px;
+}
+
+.btn {
+  font-family: "Montserrat Bold";
+  background: #fff;
+  text-transform: uppercase;
+  border-radius: 0 !important;
+  background-image: url("/src/assets/icon_polygon_7.png");
+  background-size: contain;
+  background-position: center;
+}
+mat-icon {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.btn a {
+  text-decoration: none;
+  padding-top: 3px;
+  color: #000;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content:hover a {
+  color: #ffb535;
+}

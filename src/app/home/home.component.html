@@ -1,0 +1,59 @@
+<ngb-carousel
+  #carousel
+  [interval]="3000"
+  [pauseOnHover]="pauseOnHover"
+  [pauseOnFocus]="pauseOnFocus"
+  (slide)="onSlide($event)"
+>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img
+        src="https://images.pexels.com/photos/9773943/pexels-photo-9773943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Angular Carousel 1"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h1>Best Sale</h1>
+      <h3 class="background"><span>The black phantom</span></h3>
+      <button class="btn">
+        <div class="content">
+          <mat-icon>shopping_cart</mat-icon><a href="#">Shop now</a>
+        </div>
+      </button>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img
+        src="https://images.pexels.com/photos/12931156/pexels-photo-12931156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Angular Carousel 2"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h1>Best Sale</h1>
+      <h3 class="background">The black phantom</h3>
+      <button class="btn">
+        <div class="content">
+          <mat-icon>shopping_cart</mat-icon><a href="#">Shop now</a>
+        </div>
+      </button>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img
+        src="https://images.pexels.com/photos/5803622/pexels-photo-5803622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Angular Carousel 2"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h1>Best Sale</h1>
+      <h3 class="background">The black phantom</h3>
+      <button class="btn">
+        <div class="content">
+          <mat-icon>shopping_cart</mat-icon><a href="#">Shop now</a>
+        </div>
+      </button>
+    </div>
+  </ng-template>
+</ngb-carousel>

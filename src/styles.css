@@ -3,14 +3,24 @@
   font-family: "Jost";
   src: url("./assets/Jost-Regular.ttf");
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("./assets/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat Extra Bold";
+  src: url("./assets/Montserrat-ExtraBold.ttf");
+}
 html,
 body {
   height: 100%;
-  font-family: "Jost" !important;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 .mdc-floating-label--required:not(
     .mdc-floating-label--hide-required-marker
