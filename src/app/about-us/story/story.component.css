@@ -1,0 +1,39 @@
+.container {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 50px 0;
+}
+.header {
+  position: relative;
+  padding: 50px 0;
+}
+.text {
+  font-family: "Montserrat Bold";
+  text-transform: uppercase;
+}
+.back-text {
+  font-size: 65px;
+  letter-spacing: 10px;
+  color: rgba(238, 238, 238, 0.5);
+}
+.back-overlay {
+  font-size: 30px;
+  color: #222;
+  position: absolute;
+  top: 50%;
+}
+.story {
+  justify-content: center;
+}
+p {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #444;
+}
+img {
+  transition: 0.5s;
+  cursor: pointer;
+}
+img:hover {
+  transform: scale(1.1);
+}

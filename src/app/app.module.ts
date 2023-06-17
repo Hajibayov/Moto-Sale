@@ -19,11 +19,36 @@ import {
 } from '@angular/material-moment-adapter';
 import { MessageDialogComponent } from './message-dialog/message-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { HomeComponent } from './home-page/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CardsComponent } from './cards/cards.component';
-import { FooterComponent } from './footer/footer.component';
+import { CardsComponent } from './home-page/cards/cards.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { BlogsComponent } from './home-page/blogs/blogs.component';
+import { NewsletterComponent } from './home-page/newsletter/newsletter.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { RouterModule, Routes } from '@angular/router';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { TeamComponent } from './about-us/team/team.component';
+import { StoryComponent } from './about-us/story/story.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormComponent } from './form/form.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { DragDropComponent } from './drag-drop/drag-drop.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { LiveBackgroundComponent } from './live-background/live-background.component';
+
+const appRoute: Routes = [
+  { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: 'Home', component: HomePageComponent },
+  { path: 'About-us', component: AboutUsComponent },
+  { path: 'Faqs', component: FaqsComponent },
+  { path: 'Contact', component: ContactComponent },
+  { path: 'Wishlist', component: WishlistComponent },
+];
 
 export const CUSTOM_DATE_FORMAT = {
   parse: {
@@ -45,6 +70,19 @@ export const CUSTOM_DATE_FORMAT = {
     HomeComponent,
     CardsComponent,
     FooterComponent,
+    BlogsComponent,
+    NewsletterComponent,
+    HomePageComponent,
+    AboutUsComponent,
+    TeamComponent,
+    StoryComponent,
+    FaqsComponent,
+    ExpansionPanelComponent,
+    ContactComponent,
+    FormComponent,
+    WishlistComponent,
+    DragDropComponent,
+    LiveBackgroundComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +92,9 @@ export const CUSTOM_DATE_FORMAT = {
     MaterialModule,
     MatIconModule,
     NgbModule,
+    RouterModule.forRoot(appRoute),
+    SlickCarouselModule,
+    DragDropModule,
   ],
   providers: [
     {

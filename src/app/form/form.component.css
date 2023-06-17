@@ -1,0 +1,95 @@
+.container {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 50px 0;
+}
+.header {
+  position: relative;
+  padding: 50px 0;
+}
+.text {
+  font-family: "Montserrat Bold";
+  text-transform: uppercase;
+}
+.back-text {
+  font-size: 65px;
+  letter-spacing: 10px;
+  color: rgba(238, 238, 238, 0.5);
+}
+.back-overlay {
+  font-size: 30px;
+  color: #222;
+  position: absolute;
+  top: 50%;
+}
+.story {
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 1620px;
+  margin: 80px auto;
+  box-shadow: 0px 5px 62px 0px rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+mat-label {
+  color: #373737;
+  font-size: 12px;
+  font-family: "Montserrat Bold" !important;
+}
+mat-form-field {
+  width: 100% !important;
+}
+.wrapper-form {
+  padding: 90px 68px;
+}
+.btn {
+  height: 50px;
+  width: 150px;
+  float: right;
+  background-color: rgba(255, 181, 53, 0.9);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat Bold" !important;
+}
+h1 {
+  font-family: "Jost" !important;
+  font-size: 43px;
+  font-weight: 900;
+  color: #5756a2;
+}
+p {
+  font-size: 33px;
+  font-weight: 600;
+  color: #6c757d !important;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+mat-icon,
+h3 {
+  color: #fff;
+}
+mat-icon {
+  cursor: pointer;
+}
+.team {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  color: #6c757d !important;
+}
+.btn {
+  margin-bottom: 20px;
+}
+img {
+  width: 150px;
+  height: 150px;
+}

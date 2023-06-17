@@ -1,5 +1,26 @@
-<h1 mat-dialog-title>Information</h1>
-<div mat-dialog-content>Registered</div>
-<div mat-dialog-actions>
+<h1 mat-dialog-title class="text-center head">Information</h1>
+<div mat-dialog-content>
+  <div class="content">
+    <p class="label">Name:</p>
+    <span>{{ data.fullName }}</span>
+  </div>
+  <div class="content">
+    <p class="label">Mobile</p>
+    <span>{{ data.phone }}</span>
+  </div>
+  <div class="content">
+    <p class="label">Email:</p>
+    <span>{{ data.email }}</span>
+  </div>
+  <div class="content">
+    <p class="label">Website:</p>
+    <span>{{ data.website }}</span>
+  </div>
+  <div class="content">
+    <p class="label">Message:</p>
+    <span>{{ data.message }}</span>
+  </div>
+</div>
+<div mat-dialog-actions class="action w-100">
   <button mat-button mat-dialog-close (click)="reloadPage()">Close</button>
 </div>

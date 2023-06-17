@@ -1,0 +1,128 @@
+footer {
+  width: 100%;
+  padding-top: 3% !important;
+  background-image: url("https://demo.yolotheme.com/motor/wp-content/uploads/2016/02/footer_bg_8.jpg?id=1068");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 3em 0;
+  background-attachment: fixed;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer a:hover {
+  color: gray;
+}
+.footer-title {
+  font-size: 4em;
+  color: white;
+  align-self: center;
+}
+
+.footer-list {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat";
+}
+
+.footer-list h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-list-item a {
+  color: white;
+}
+mat-icon {
+  color: rgba(255, 181, 53, 0.9);
+}
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.last a {
+  color: white;
+}
+
+hr {
+  margin: 2em auto;
+  border: none;
+  height: 5px;
+  width: 95%;
+  color: white;
+  background-color: white; /* Modern Browsers */
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-wrap: wrap;
+  }
+  .footer-main {
+    width: 90%;
+    align-self: center;
+    padding-bottom: 2em;
+  }
+  .footer-list {
+    width: 25%;
+  }
+
+  .last {
+    width: 40%;
+  }
+  .footer-header {
+    justify-content: center;
+  }
+  .footer-text {
+    text-align: center;
+  }
+}
+@media (max-width: 1280px) {
+  .footer-title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer-list {
+    width: 100%;
+    text-align: center;
+  }
+  .last {
+    width: 100%;
+    text-align: center;
+  }
+
+  .last h3 {
+    text-align: center;
+  }
+
+  .last ul {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .footer-list-item a {
+    width: 100%;
+  }
+
+  .icons {
+    justify-content: center;
+    align-items: center;
+  }
+}

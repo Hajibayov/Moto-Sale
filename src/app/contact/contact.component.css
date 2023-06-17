@@ -1,0 +1,46 @@
+.container-fluid {
+  background-color: #eee;
+  padding: 50px auto;
+}
+.background {
+  background-image: url("https://demo.yolotheme.com/motor/wp-content/uploads/2016/02/page-title-bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  padding: 250px auto !important;
+}
+h1 {
+  font-family: "Montserrat Bold";
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 120px auto;
+  color: #fff;
+}
+.route {
+  padding: 10px 25px;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -5%;
+}
+.about-us {
+  display: flex;
+  justify-content: center;
+}
+.home {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+p {
+  font-family: "Montserrat";
+  font-size: 12px;
+  cursor: pointer;
+}
+.orange {
+  color: rgba(255, 181, 53, 0.9);
+}

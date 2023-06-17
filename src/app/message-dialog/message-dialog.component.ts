@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-message-dialog',
   templateUrl: './message-dialog.component.html',
-  styleUrls: ['./message-dialog.component.css']
+  styleUrls: ['./message-dialog.component.css'],
 })
 export class MessageDialogComponent {
-  reloadPage(){
-    window.location.reload()
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+
+  reloadPage() {
+    window.location.reload();
   }
 }

@@ -1,5 +1,5 @@
 .navbar {
-  background: rgba(0, 0, 0, 0.25) !important;
+  background: #333 !important;
   position: relative;
 }
 .navbar-brand img {

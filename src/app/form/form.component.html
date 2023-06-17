@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row header">
+    <h1 class="text-center text back-text">Contact Form</h1>
+    <h3 class="text-center text back-overlay">Contact Form</h3>
+  </div>
+  <div class="row story justify-content-center">
+    <form [formGroup]="mainForm" (ngSubmit)="onSubmit()">
+      <h3>Team captain</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="fullName" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile</mat-label>
+            <input matInput formControlName="phone" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" />
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Website</mat-label>
+            <input matInput formControlName="website" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Message</mat-label>
+          <textarea matInput formControlName="message"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-9">
+          <button
+            [disabled]="!this.mainForm.valid"
+            class="btn w-100"
+            type="submit"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
