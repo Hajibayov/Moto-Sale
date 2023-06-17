@@ -83,3 +83,11 @@ mat-form-field:hover {
 .mat-accordion .mat-expansion-panel {
   border: none !important;
 }
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+}
+/* Font color */
+::ng-deep input.mat-input-element {
+  color: white;
+}
