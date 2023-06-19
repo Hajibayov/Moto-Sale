@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-team',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./team.component.css'],
 })
 export class TeamComponent {
+  ngOnInit(): void {
+    AOS.init();
+  }
   slides = [
     {
       img: 'https://demo.yolotheme.com/motor/wp-content/uploads/2016/02/chris_ronaldo.jpg',

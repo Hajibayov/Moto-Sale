@@ -1,5 +1,8 @@
-<h1 mat-dialog-title class="text-center head">Information</h1>
-<div mat-dialog-content>
+<div *ngIf="!spinner" class="spinner">
+  <span  class="loader"></span>
+</div>
+<h1 *ngIf="spinner" mat-dialog-title class="text-center head">Information</h1>
+<div *ngIf="spinner" mat-dialog-content>
   <div class="content">
     <p class="label">Name:</p>
     <span>{{ data.fullName }}</span>
@@ -21,6 +24,6 @@
     <span>{{ data.message }}</span>
   </div>
 </div>
-<div mat-dialog-actions class="action w-100">
+<div *ngIf="spinner" mat-dialog-actions class="action w-100">
   <button mat-button mat-dialog-close (click)="reloadPage()">Close</button>
 </div>

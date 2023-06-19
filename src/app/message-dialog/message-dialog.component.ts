@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -6,10 +6,21 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './message-dialog.component.html',
   styleUrls: ['./message-dialog.component.css'],
 })
-export class MessageDialogComponent {
+export class MessageDialogComponent implements OnInit {
+  spinner: boolean = true;
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
-
+  ngOnInit() {
+    // this.showSpinner();
+  }
   reloadPage() {
     window.location.reload();
   }
+  // showSpinner() {
+  //   this.spinner = true;
+  //   setTimeout(function () {
+  //     console.log(123);
+  //     this.spinner = true;
+  //   }, 3000);
+    
+  // }
 }

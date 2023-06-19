@@ -5,6 +5,8 @@ img {
   width: 100%;
   height: 120vh;
   filter: grayscale(100%);
+  animation: increase 40s linear 10ms infinite;
+  transition: all 0.2s ease-in-out;
 }
 .carousel-caption {
   top: 45% !important;
@@ -73,4 +75,12 @@ mat-icon {
 
 .content:hover a {
   color: #ffb535;
+}
+@keyframes increase {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }

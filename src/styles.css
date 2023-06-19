@@ -33,20 +33,31 @@ body {
   margin: 0;
 }
 
-.mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after {
+.mdc-floating-label--required:not(
+    .mdc-floating-label--hide-required-marker
+  )::after {
   content: "" !important;
 }
 
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__trailing {
   border-color: white;
 }
 
-.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__leading,
-.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__notch,
-.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__trailing {
-  border-color: red !important;
+.mdc-text-field--outlined
+  .mdc-notched-outline--notched
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined
+  .mdc-notched-outline--notched
+  .mdc-notched-outline__notch,
+.mdc-text-field--outlined
+  .mdc-notched-outline--notched
+  .mdc-notched-outline__trailing {
+  border-color: white !important;
 }
 
 .mat-mdc-icon-button svg {
@@ -54,12 +65,14 @@ body {
 }
 
 .mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline,
-.mat-mdc-tab-link:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline {
+.mat-mdc-tab-link:not(.mat-mdc-tab-disabled)
+  .mdc-tab-indicator__content--underline {
   border-color: #ffb535;
 }
 
 .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label,
-.mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+.mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active
+  .mdc-tab__text-label {
   color: #ffb535;
 }
 
