@@ -40,6 +40,8 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LiveBackgroundComponent } from './live-background/live-background.component';
+import { BenefitsComponent } from './benefits/benefits.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const appRoute: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -83,6 +85,7 @@ export const CUSTOM_DATE_FORMAT = {
     WishlistComponent,
     DragDropComponent,
     LiveBackgroundComponent,
+    BenefitsComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,6 +98,7 @@ export const CUSTOM_DATE_FORMAT = {
     RouterModule.forRoot(appRoute),
     SlickCarouselModule,
     DragDropModule,
+    FontAwesomeModule,
   ],
   providers: [
     {

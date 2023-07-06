@@ -1,0 +1,74 @@
+.benefits {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.benefit-content-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 1s ease;
+  opacity: 1;
+}
+.benefit-title {
+  font-family: "Quicksand Bold";
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #e1e1e1;
+}
+.box {
+  width: 72px;
+  height: 72px;
+  top: -12%;
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+fa-icon {
+  font-size: 24px;
+}
+.rotate {
+  z-index: 1;
+  transform: rotate(-45deg) !important;
+}
+.benefit-content {
+  opacity: 0;
+  position: absolute;
+  top: 26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+.col-md-3 {
+  transition: all 1s ease;
+}
+hr {
+  border: none;
+  width: 50px;
+  height: 2px !important;
+  background-color: #fcb900;
+}
+.content-text {
+  font-family: "Quicksand Bold";
+  font-size: 16px;
+  padding: 10px 0;
+}
+.text {
+  font-family: "Montserrat";
+  font-size: 12.3px;
+}
+.col-md-3:hover .benefit-content-main {
+  opacity: 0;
+}
+.col-md-3:hover .benefit-content {
+  opacity: 1;
+  top: 20%;
+}
