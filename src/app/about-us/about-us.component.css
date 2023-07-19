@@ -1,6 +1,5 @@
 .container-fluid {
   background-color: #eee;
-  padding: 50px auto;
 }
 .background {
   background-image: url("https://demo.yolotheme.com/motor/wp-content/uploads/2016/02/page-title-bg1.jpg");
@@ -9,7 +8,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  padding: 250px auto !important;
 }
 h1 {
   font-family: "Montserrat Bold";

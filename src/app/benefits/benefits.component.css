@@ -9,7 +9,6 @@
   align-items: center;
   position: relative;
   transition: all 1s ease;
-  opacity: 1;
 }
 .benefit-title {
   font-family: "Quicksand Bold";

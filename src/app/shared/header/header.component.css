@@ -1,6 +1,7 @@
 .navbar {
   background: #333 !important;
   position: relative;
+  justify-content: space-between !important;
 }
 .navbar-brand img {
   display: block;

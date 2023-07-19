@@ -110,7 +110,7 @@ mat-form-field:hover {
 }
 
 .active {
-  color: #ffb535;
+  color: #ffb535 !important;
 }
 
 .mat-accordion .mat-expansion-panel {
@@ -124,4 +124,7 @@ mat-form-field:hover {
 /* Font color */
 ::ng-deep input.mat-input-element {
   color: white;
+}
+.row{
+  margin: 0 !important;
 }
