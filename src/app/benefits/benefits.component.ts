@@ -6,7 +6,7 @@ import { faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-benefits',
   templateUrl: './benefits.component.html',
-  styleUrls: ['./benefits.component.css'],
+  styleUrls: ['./benefits.component.scss'],
 })
 export class BenefitsComponent {
   faTruck = faTruck;

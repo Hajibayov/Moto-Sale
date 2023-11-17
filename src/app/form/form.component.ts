@@ -6,7 +6,7 @@ import { MessageDialogComponent } from '../message-dialog/message-dialog.compone
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+  styleUrls: ['./form.component.scss'],
 })
 export class FormComponent {
   unamePattern = '^[a-z0-9_-]{8,15}$';

@@ -61,11 +61,13 @@ mat-icon {
   height: 100%;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 .btn a {
   text-decoration: none;
   padding-left: 15px;
   color: #000;
+  transition: all 0.3s ease;
 }
 .content {
   display: flex;
@@ -73,8 +75,11 @@ mat-icon {
   align-items: center;
 }
 
-.content:hover a {
+.btn:hover a {
   color: #ffb535;
+}
+.btn:hover mat-icon {
+  color: #fff;
 }
 @keyframes increase {
   0% {

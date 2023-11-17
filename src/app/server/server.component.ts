@@ -7,7 +7,7 @@ import { MessageDialogComponent } from '../message-dialog/message-dialog.compone
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html',
-  styleUrls: ['./server.component.css'],
+  styleUrls: ['./server.component.scss'],
 })
 export class ServerComponent implements OnInit {
   unamePattern = '^[a-z0-9_-]{8,15}$';

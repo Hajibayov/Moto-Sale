@@ -4,7 +4,7 @@ declare let AOS: any;
 @Component({
   selector: 'app-blogs',
   templateUrl: './blogs.component.html',
-  styleUrls: ['./blogs.component.css'],
+  styleUrls: ['./blogs.component.scss'],
 })
 export class BlogsComponent implements OnInit {
   ngOnInit(): void {
