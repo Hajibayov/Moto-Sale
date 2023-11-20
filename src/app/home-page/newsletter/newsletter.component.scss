@@ -4,13 +4,7 @@
 .newletter-content {
   display: flex;
 }
-.col-md-8,
-.col-md-2,
-.col-md-6,
-.col-md-1 {
-  padding: 0;
-}
-.container-fluid {
+.background {
   width: 100%;
   background-image: url("https://images.pexels.com/photos/935103/pexels-photo-935103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
@@ -23,6 +17,7 @@
   overflow: hidden;
   height: 100%;
   z-index: 2;
+  padding: 50px 0;
 }
 
 h1 {
@@ -33,12 +28,24 @@ h1 {
   text-transform: uppercase;
   color: #fff;
 }
+mat-form-field {
+  width: 70% !important;
+}
 button {
-  width: 100%;
+  background-color: transparent;
   border-color: #fff !important;
   height: 56px !important;
   transition: 0.5s;
-
+  padding: 10px;
+  width: 10%;
+}
+input {
+  border: 1px solid #fff !important;
+  border-radius: 6px;
+  height: 56px;
+  background-color: transparent;
+  width: 70%;
+  color: #fff;
 }
 mat-icon {
   margin-left: 5px !important;
@@ -49,4 +56,9 @@ button:hover {
 }
 button:hover mat-icon {
   color: rgba(255, 181, 53, 0.9);
+}
+.form-control:focus {
+  background-color: transparent;
+  box-shadow: none;
+  color: #fff;
 }

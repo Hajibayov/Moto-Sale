@@ -8,43 +8,37 @@
   background-attachment: fixed;
 }
 
-
-// footer a:hover {
-//   color: gray;
-// }
 .footer-title {
   font-size: 4em;
   color: white;
   align-self: center;
 }
 
-
 .footer-list-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.icon{
+.icon {
   margin-bottom: 35px;
   column-gap: 10px;
 }
-.icon mat-icon{
+.icon mat-icon {
   overflow: visible !important;
-
 }
-.text{
+.text {
   cursor: pointer;
   margin-bottom: 20px;
   transition: all 0.3s ease;
 }
 
-.text:hover{
+.text:hover {
   margin-left: 10px;
 }
-.text:hover a{
+.text:hover a {
   color: rgba(255, 181, 53, 0.9);
 }
-.text:hover .arrow{
+.text:hover .arrow {
   color: rgba(255, 181, 53, 0.9);
 }
 
@@ -61,90 +55,18 @@
 .contact {
   color: rgba(255, 181, 53, 0.9);
 }
-.arrow{
+.arrow {
   color: #c4c4c4;
-
 }
-// .icon {
-//   display: flex;
-//   align-items: center;
-//   gap: 10px;
-//   margin-bottom: 10px;
-//   cursor: pointer;
-// }
-// .last a {
-//   color: white;
-// }
 
-// hr {
-//   margin: 2em auto;
-//   border: none;
-//   height: 5px;
-//   width: 95%;
-//   color: white;
-//   background-color: white; /* Modern Browsers */
-// }
-
-// .copyright {
-//   text-align: center;
-//   color: white;
-//   font-weight: 700;
-// }
-
-// @media (max-width: 768px) {
-//   .footer-columns {
-//     flex-wrap: wrap;
-//   }
-//   .footer-main {
-//     width: 90%;
-//     align-self: center;
-//     padding-bottom: 2em;
-//   }
-//   .footer-list {
-//     width: 25%;
-//   }
-
-//   .last {
-//     width: 40%;
-//   }
-//   .footer-header {
-//     justify-content: center;
-//   }
-//   .footer-text {
-//     text-align: center;
-//   }
-// }
-// @media (max-width: 1280px) {
-//   .footer-title {
-//     font-size: 2em;
-//   }
-// }
-
-// @media (max-width: 425px) {
-//   .footer-list {
-//     width: 100%;
-//     text-align: center;
-//   }
-//   .last {
-//     width: 100%;
-//     text-align: center;
-//   }
-
-//   .last h3 {
-//     text-align: center;
-//   }
-
-//   .last ul {
-//     justify-self: center;
-//     align-self: center;
-//   }
-
-//   .footer-list-item a {
-//     width: 100%;
-//   }
-
-//   .icons {
-//     justify-content: center;
-//     align-items: center;
-//   }
-// }
+fa-icon {
+  width: 28px;
+  font-size: 24px;
+  color: #c4c4c4;
+}
+.payments {
+  column-gap: 20px;
+}
+.copyright-text {
+  color: #c4c4c4;
+}
