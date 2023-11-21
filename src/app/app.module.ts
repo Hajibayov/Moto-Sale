@@ -42,15 +42,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LiveBackgroundComponent } from './live-background/live-background.component';
 import { BenefitsComponent } from './benefits/benefits.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-const appRoute: Routes = [
-  { path: '', redirectTo: 'Home', pathMatch: 'full' },
-  { path: 'Home', component: HomePageComponent },
-  { path: 'About-us', component: AboutUsComponent },
-  { path: 'Faqs', component: FaqsComponent },
-  { path: 'Contact', component: ContactComponent },
-  { path: 'Wishlist', component: WishlistComponent },
-];
+import { AddProductComponent } from './home-page/add-product/add-product.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 export const CUSTOM_DATE_FORMAT = {
   parse: {
@@ -86,6 +80,7 @@ export const CUSTOM_DATE_FORMAT = {
     DragDropComponent,
     LiveBackgroundComponent,
     BenefitsComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,10 +90,11 @@ export const CUSTOM_DATE_FORMAT = {
     MaterialModule,
     MatIconModule,
     NgbModule,
-    RouterModule.forRoot(appRoute),
     SlickCarouselModule,
     DragDropModule,
     FontAwesomeModule,
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     {

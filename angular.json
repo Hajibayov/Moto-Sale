@@ -98,10 +98,5 @@
   },
   "cli": {
     "analytics": "da119c59-5b61-4694-ab2d-61b25ffe16fa"
-  },
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
   }
 }
