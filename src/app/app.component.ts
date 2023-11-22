@@ -1,18 +1,13 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'form';
+export class AppComponent implements OnInit {
   // apply_form: FormGroup;
-  constructor(public formbilder: FormBuilder) {
-    // this.apply_form = this.formbilder.group({
-    //   name: ['',Validators.required],
-    //   surname: ['',Validators.required],
-    //   experience: ['',Validators.required]
-    // });
+  constructor() {}
+
+  ngOnInit(): void {
   }
 }

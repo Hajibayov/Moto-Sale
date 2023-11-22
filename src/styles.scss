@@ -121,10 +121,17 @@ mat-form-field:hover {
   color: white;
 }
 
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 10px !important;
+}
+.mdc-dialog .mdc-dialog__content {
+  padding: 30px !important;
+}
+
 /* Font color */
 ::ng-deep input.mat-input-element {
   color: white;
 }
-.row{
+.row {
   margin: 0 !important;
 }

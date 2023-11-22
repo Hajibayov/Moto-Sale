@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-declare let AOS: any;
 
 @Component({
   selector: 'app-blogs',
@@ -8,6 +7,5 @@ declare let AOS: any;
 })
 export class BlogsComponent implements OnInit {
   ngOnInit(): void {
-    AOS.init();
   }
 }

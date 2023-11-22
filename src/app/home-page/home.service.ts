@@ -17,4 +17,20 @@ export class HomeService {
       )
       .pipe(map(() => {}));
   }
+
+  getProducts() {
+    return this.http
+      .get('https://moto-sa-default-rtdb.firebaseio.com/products.json')
+      .pipe(
+        map((responseData) => {
+          const productsArray = [];
+          for (const key in responseData) {
+            if (responseData.hasOwnProperty(key)) {
+              productsArray.push({ ...responseData[key], id: key });
+            }
+          }
+          return productsArray;
+        })
+      );
+  }
 }

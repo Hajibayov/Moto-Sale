@@ -24,6 +24,7 @@ export class AddProductComponent implements OnInit {
 
   onSubmit() {
     this.homeService.addProducts(this.mainForm.value).subscribe((res) => {});
+    this.mainForm.reset();
   }
 
   onAddImage() {

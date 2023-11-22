@@ -45,6 +45,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddProductComponent } from './home-page/add-product/add-product.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewProductDialogComponent } from './view-product-dialog/view-product-dialog.component';
 
 export const CUSTOM_DATE_FORMAT = {
   parse: {
@@ -81,6 +82,7 @@ export const CUSTOM_DATE_FORMAT = {
     LiveBackgroundComponent,
     BenefitsComponent,
     AddProductComponent,
+    ViewProductDialogComponent,
   ],
   imports: [
     BrowserModule,
