@@ -1,3 +1,49 @@
 <div mat-dialog-content>
-  <p>{{ data.name }}</p>
+  <fa-icon mat-dialog-close class="dialog-close" [icon]="faXmark"></fa-icon>
+  <div class="row">
+    <div class="col-md-6">
+      <ngx-slick-carousel
+        class="carousel images"
+        #slickModal="slick-carousel"
+        [config]="imagesConfig"
+      >
+        <div ngxSlickItem *ngFor="let slide of data.otherImages" class="slide">
+          <img class="main-img" src="{{ slide }}" alt="" width="100%" />
+        </div>
+      </ngx-slick-carousel>
+      <ngx-slick-carousel
+        class="carousel thumbs"
+        #slickModal="slick-carousel"
+        [config]="thumbsConfig"
+      >
+        <div ngxSlickItem *ngFor="let slide of data.otherImages" class="slide">
+          <div class="img-box">
+            <img
+              class="thumb-img"
+              style="cursor: pointer"
+              src="{{ slide }}"
+              alt=""
+              width="100%"
+            />
+          </div>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+    <div class="col-md-6">
+      <h3 class="product-name">{{ data.name }}</h3>
+      <p class="product-price">${{ data.price }}.00</p>
+      <p class="product-desc">{{ data.description }}</p>
+      <span class="product-list">Availability:</span>
+      <span
+        [ngClass]="{
+          'text-warning': data.availability == 'inStock',
+          'text-danger': data.availability != 'inStock'
+        }"
+        class="product-list-item"
+        >{{
+          data.availability == "inStock" ? "In stock" : "Out of stock"
+        }}</span
+      >
+    </div>
+  </div>
 </div>

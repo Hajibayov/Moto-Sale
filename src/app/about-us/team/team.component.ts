@@ -39,4 +39,22 @@ export class TeamComponent {
     autoplay: true,
     autoplaySpeed: 2000,
   };
+
+  // imagesConfig = {
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   asNavFor: '.thumbs',
+  // };
+  // thumbsConfig = {
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   centerMode: true,
+  //   draggable: false,
+  //   focusOnSelect: true,
+  //   autoplaySpeed: 2000,
+  //   asNavFor: '.images',
+  // };
 }
