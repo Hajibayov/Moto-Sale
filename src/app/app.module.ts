@@ -46,6 +46,7 @@ import { AddProductComponent } from './home-page/add-product/add-product.compone
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewProductDialogComponent } from './view-product-dialog/view-product-dialog.component';
+import { CollectionComponent } from './collection/collection.component';
 
 export const CUSTOM_DATE_FORMAT = {
   parse: {
@@ -83,6 +84,7 @@ export const CUSTOM_DATE_FORMAT = {
     BenefitsComponent,
     AddProductComponent,
     ViewProductDialogComponent,
+    CollectionComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+html {
+  overflow-x: hidden;
+}
 @font-face {
   font-family: "Jost";
   src: url("./assets/Jost-Regular.ttf");
