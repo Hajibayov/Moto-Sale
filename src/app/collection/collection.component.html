@@ -4,8 +4,8 @@
       <div class="col-md-4">
         <div class="clearfix">
           <div class="wrapper"></div>
-            <h3 class="text img-title">Shoes Orange Alpinestars</h3>
-            <p class="text img-desc">Best Collection</p>
+          <h3 class="text img-title">Shoes Orange Alpinestars</h3>
+          <p class="text img-desc">Best Collection</p>
           <img
             src="https://demo.yolotheme.com/motor/wp-content/uploads/2016/02/banner_aplinestars_5.jpg"
             alt=""
@@ -67,3 +67,12 @@
     </div>
   </div>
 </div>
+<div *ngFor="let arr of slicedArrays">
+  <div class="row">
+    <div class="row">
+      <div *ngFor="let item of arr" class="col-md-6">{{ item }}</div>
+    </div>
+  </div>
+</div>
+<button (click)="onNextClick()">Next</button>
+<button (click)="onPreviousClick()">previous</button>
