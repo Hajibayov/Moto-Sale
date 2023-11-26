@@ -1,81 +1,7 @@
-mat-tab-group {
-  margin: 50px 0;
-  position: relative;
-}
-.tab-container {
-  background-color: #eee;
-  height: 300px;
-}
-.tab-img {
-  width: 35%;
-  height: 100%;
-  background-image: url("https://powersports.honda.com/-/media/products/family/xr650l/trims/trim-main/xr650l/2023/2023-xr650l-white-650x380.png");
-  background-position: -30px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.tab-content {
-  position: absolute;
-  width: 60%;
-  top: 20%;
-  right: 5%;
-  background-color: #fff;
-  padding: 25px;
-}
-h3 {
-  font-family: "Montserrat Bold";
-  font-size: 1rem;
-}
-p {
-  font-family: "Montserrat";
-}
-.btn {
-  font-family: "Montserrat Bold";
-  background: #fff;
-  text-transform: uppercase;
-  border-radius: 0 !important;
-  background-image: url("/assets/icon_polygon_7.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-mat-icon {
-  font-size: 20px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.btn a {
-  text-decoration: none;
-  padding-left: 15px;
-  color: #000;
-}
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content:hover a {
-  color: #ffb535;
-}
-.tab-img-2 {
-  width: 45%;
-  height: 100%;
-  background-image: url("/assets/moto.png");
-  background-position: 10px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.tab-img-3 {
-  width: 30%;
-  height: 100%;
-  background-image: url("https://content2.kawasaki.com/ContentStorage/KMC/ProductTrimGroup/55/8fe5c7a3-6215-4c47-8398-8c0925533ca3.png?w=750");
-  background-position: 10px;
-  background-repeat: no-repeat;
-  background-size: contain;
+.blogs {
+  padding: 70px 0;
 }
 .blogs-header {
-  margin-top: 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -93,4 +19,37 @@ mat-icon {
 .blogs-header p {
   width: 50%;
   text-align: center;
+}
+.blogs-carousel-content {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 35px 25px;
+}
+.content-header {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: bold;
+}
+.content-text {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #444;
+}
+.content-user {
+  color: #444;
+}
+.blogs-carousel-content::before::after {
+  position: absolute;
+  z-index: 10;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+  border-width: 18px 20px 18px 0;
+  content: "";
+  left: -20px;
+  top: 36px;
+}
+
+.btn {
+  background: #f6f6f6;
+  margin: 20px 5px;
 }

@@ -85,6 +85,7 @@ export const CUSTOM_DATE_FORMAT = {
     AddProductComponent,
     ViewProductDialogComponent,
     CollectionComponent,
+   
   ],
   imports: [
     BrowserModule,

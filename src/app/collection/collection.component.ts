@@ -4,9 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-collection',
   templateUrl: './collection.component.html',
   styleUrls: ['./collection.component.scss'],
+
 })
 export class CollectionComponent implements OnInit {
-  ary = [0, 1, 2, 3, 4, 5, 6, 7];
+  ary = [0, 1, 2, 3, 4, 5, 6, 7,8,9];
   slicedArrays: any[] = [];
   currentIndex = 0;
   iterate: Function | undefined;

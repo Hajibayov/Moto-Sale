@@ -1,11 +1,5 @@
-<div
-  class="container"
-  data-aos="fade-up"
-  data-aos-duration="1000"
-  data-aos-delay="300"
-  data-aos-once="true"
->
-  <div class="row">
+<div class="container">
+  <div class="blogs row justify-content-center">
     <div class="blogs-header">
       <img
         src="https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/logo_title3.png"
@@ -18,64 +12,40 @@
         volutpa
       </p>
     </div>
-    <mat-tab-group>
-      <mat-tab label="Honda">
-        <div class="tab-container">
-          <div class="tab-img"></div>
-          <div class="tab-content">
-            <h3>Honda</h3>
-            <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et
-            </p>
-            <button class="btn">
-              <div class="content">
-                <mat-icon>keyboard_arrow_right</mat-icon
-                ><a href="#">Read More</a>
+    <div class="blogs-carousel-arrow text-center">
+      <button class="btn" (click)="onNextClick()">
+        <fa-icon [icon]="faChevronLeft"></fa-icon>
+      </button>
+      <button class="btn" (click)="onPreviousClick()">
+        <fa-icon [icon]="faChevronRight"></fa-icon>
+      </button>
+    </div>
+    <div *ngFor="let arr of slicedArrays">
+      <div [@slideInOut]="animationState" class="row">
+        <div class="row">
+          <div *ngFor="let item of arr; let i = index" class="col-md-6 p-0">
+            <div class="d-flex" [ngClass]="{ 'flex-row-reverse': i % 4 > 1 }">
+              <div class="blogs-carousel-img w-50">
+                <img class="w-100 h-100" [src]="item.imageUrl" alt="" />
               </div>
-            </button>
+              <div class="blogs-carousel-content w-50">
+                <h3 class="content-header">{{ item.name }}</h3>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <fa-icon [icon]="faComments"></fa-icon>
+                    <span class="mx-2">0</span>
+                  </div>
+                  <div class="col-md-6">
+                    <fa-icon class="mr-3" [icon]="faPen"></fa-icon>
+                    <span class="content-user mx-2">{{ item.user }}</span>
+                  </div>
+                </div>
+                <p class="content-text m-0">{{ item.desc }}</p>
+              </div>
+            </div>
           </div>
         </div>
-      </mat-tab>
-      <mat-tab label="Yamaha">
-        <div class="tab-container">
-          <div class="tab-img tab-img-2"></div>
-          <div class="tab-content">
-            <h3>Yamaha</h3>
-            <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et
-            </p>
-            <button class="btn">
-              <div class="content">
-                <mat-icon>keyboard_arrow_right</mat-icon
-                ><a href="#">Read More</a>
-              </div>
-            </button>
-          </div>
-        </div>
-      </mat-tab>
-      <mat-tab label="Kawasaki">
-        <div class="tab-container">
-          <div class="tab-img tab-img-3"></div>
-          <div class="tab-content">
-            <h3>Kawasaki</h3>
-            <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et
-            </p>
-            <button class="btn">
-              <div class="content">
-                <mat-icon>keyboard_arrow_right</mat-icon
-                ><a href="#">Read More</a>
-              </div>
-            </button>
-          </div>
-        </div>
-      </mat-tab>
-    </mat-tab-group>
+      </div>
+    </div>
   </div>
 </div>
