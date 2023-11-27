@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Product } from '../models/product.model';
+import { Blog } from '../models/blog.model';
 
 @Injectable({
   providedIn: 'root',
@@ -32,5 +33,11 @@ export class HomeService {
           return productsArray;
         })
       );
+  }
+
+  addBlog(blogData: Blog) {
+    return this.http
+      .post('https://moto-sa-default-rtdb.firebaseio.com/blogs.json', blogData)
+      .pipe(map(() => {}));
   }
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
@@ -47,7 +47,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewProductDialogComponent } from './view-product-dialog/view-product-dialog.component';
 import { CollectionComponent } from './collection/collection.component';
-
+import { ClientsComponent } from './home-page/clients/clients.component';
+import { CarouselModule } from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
+import { AddBlogsComponent } from './home-page/add-blogs/add-blogs.component';
 export const CUSTOM_DATE_FORMAT = {
   parse: {
     dateInput: 'DD.MM.YYYY',
@@ -85,7 +88,8 @@ export const CUSTOM_DATE_FORMAT = {
     AddProductComponent,
     ViewProductDialogComponent,
     CollectionComponent,
-   
+    ClientsComponent,
+    AddBlogsComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,6 +104,9 @@ export const CUSTOM_DATE_FORMAT = {
     FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
+    CarouselModule,
+    ButtonModule,
+    FormsModule,
   ],
   providers: [
     {

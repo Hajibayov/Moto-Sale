@@ -1,0 +1,16 @@
+<div class="container">
+  <p-carousel
+    [autoplayInterval]="3000"
+    [circular]="true"
+    [value]="images"
+    [numVisible]="5"
+    [numScroll]="1"
+    [showIndicators]="false"
+    [showNavigators]="true"
+  >
+     
+    <ng-template let-image pTemplate="item">
+          <img [src]="image.source" [alt]="image.alt" class="image-card" />  
+    </ng-template>
+  </p-carousel>
+</div>
