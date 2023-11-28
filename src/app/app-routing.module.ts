@@ -6,6 +6,7 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { ContactComponent } from './contact/contact.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { AddProductComponent } from './home-page/add-product/add-product.component';
+import { AllBlogsComponent } from './all-blogs/all-blogs.component';
 
 const appRoute: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const appRoute: Routes = [
   { path: 'Contact', component: ContactComponent },
   { path: 'Wishlist', component: WishlistComponent },
   { path: 'Add', component: AddProductComponent },
+  { path: 'Blogs', component: AllBlogsComponent },
 ];
 
 @NgModule({

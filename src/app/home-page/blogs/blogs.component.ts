@@ -4,6 +4,9 @@ import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { Blog } from 'src/app/models/blog.model';
+import { HomeService } from '../home.service';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-blogs',
@@ -27,75 +30,21 @@ export class BlogsComponent implements OnInit {
   faChevronLeft = faChevronLeft;
   faComments = faComments;
   faPen = faPen;
-  ary = [
-    {
-      name: 'Neque porro quisquam',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      imageUrl:
-        'https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/blog9-300x203.jpg',
-      user: 'admin',
-    },
-    {
-      name: 'Neque porro quisquam',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      imageUrl:
-        'https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/blog8-300x203.jpg',
-      user: 'admin',
-    },
-
-    {
-      name: 'Neque porro quisquam',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      imageUrl:
-        'https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/blog7-300x203.jpg',
-      user: 'admin',
-    },
-    {
-      name: 'Neque porro quisquam',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      imageUrl:
-        'https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/blog6-300x203.jpg',
-      user: 'admin',
-    },
-    {
-      name: 'Neque porro quisquam',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      imageUrl:
-        'https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/blog5-300x203.jpg',
-      user: 'admin',
-    },
-    {
-      name: 'Neque porro quisquam',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      imageUrl:
-        'https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/blog4-300x203.jpg',
-      user: 'admin',
-    },
-    {
-      name: 'Neque porro quisquam',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      imageUrl:
-        'https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/blog3-300x203.jpg',
-      user: 'admin',
-    },
-    {
-      name: 'Neque porro quisquam',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      imageUrl:
-        'https://demo.yolotheme.com/motor/wp-content/uploads/2016/01/blog2-300x203.jpg',
-      user: 'admin',
-    },
-  ];
+  ary: Blog[] = [];
   slicedArrays: any[] = [];
   currentIndex = 0;
   iterate: Function | undefined;
   animationState: string;
 
-  constructor() {}
+  constructor(private homeService: HomeService, private router: Router) {}
 
   ngOnInit() {
-    this.iterate = this.iterator(this.ary, 4);
-    this.updateSlicedArrays();
+    this.homeService.getBlogs().subscribe((res) => {
+      console.log(res);
+      this.ary = res;
+      this.iterate = this.iterator(this.ary, 4);
+      this.updateSlicedArrays();
+    });
   }
 
   iterator(a: any[], n: number) {
@@ -142,5 +91,14 @@ export class BlogsComponent implements OnInit {
       this.iterate = this.iterator(this.ary.slice(this.currentIndex), 4);
     }
     this.updateSlicedArrays();
+  }
+
+  onClick(id: string) {
+    let extras: NavigationExtras = {
+      queryParams: {
+        blogId: id,
+      },
+    };
+    this.router.navigate(['Blogs'], extras);
   }
 }

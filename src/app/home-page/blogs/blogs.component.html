@@ -25,6 +25,7 @@
         <div [@slideInOut]="animationState" class="row">
           <div class="row">
             <div
+              (click)="onClick(item.id)"
               *ngFor="let item of arr; let i = index"
               class="blogs-card col-md-6 p-0"
             >
@@ -32,21 +33,25 @@
                 <div class="blogs-carousel-img w-50">
                   <div class="wrapper-left w-50 h-100"></div>
                   <div class="wrapper-right w-50 h-100"></div>
-                  <img class="w-100 h-100" [src]="item.imageUrl" alt="" />
+                  <img class="w-100 h-100" [src]="item.imageUrl" [alt]="" />
                 </div>
                 <div class="blogs-carousel-content w-50">
                   <h3 class="content-header">{{ item.name }}</h3>
                   <div class="row mb-3">
                     <div class="col-md-6">
                       <fa-icon [icon]="faComments"></fa-icon>
-                      <span class="mx-2">0</span>
+                      <span class="mx-2">{{ 0 }}</span>
                     </div>
                     <div class="col-md-6">
                       <fa-icon class="mr-3" [icon]="faPen"></fa-icon>
-                      <span class="content-user mx-2">{{ item.user }}</span>
+                      <span class="content-user mx-2">{{
+                        item.createdBy
+                      }}</span>
                     </div>
                   </div>
-                  <p class="content-text m-0">{{ item.desc }}</p>
+                  <p class="content-text m-0">
+                    {{ item.content | slice : 0 : 90 }}...
+                  </p>
                 </div>
               </div>
             </div>

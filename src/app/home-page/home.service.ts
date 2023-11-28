@@ -35,6 +35,28 @@ export class HomeService {
       );
   }
 
+  getBlogs(): Observable<any> {
+    return this.http
+      .get('https://moto-sa-default-rtdb.firebaseio.com/blogs.json')
+      .pipe(
+        map((responseData) => {
+          const productsArray = [];
+          for (const key in responseData) {
+            if (responseData.hasOwnProperty(key)) {
+              productsArray.push({ ...responseData[key], id: key });
+            }
+          }
+          return productsArray;
+        })
+      );
+  }
+
+  getBlogById(id: string): Observable<any> {
+    return this.getBlogs().pipe(
+      map((blogs) => blogs.find((blog) => blog.id === id))
+    );
+  }
+
   addBlog(blogData: Blog) {
     return this.http
       .post('https://moto-sa-default-rtdb.firebaseio.com/blogs.json', blogData)

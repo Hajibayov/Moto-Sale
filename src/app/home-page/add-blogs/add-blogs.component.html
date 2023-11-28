@@ -8,6 +8,11 @@
     <input type="text" class="form-control" formControlName="content" />
   </div>
   <div class="form-group">
+    <label for="content">Image url</label>
+    <input type="text" class="form-control" formControlName="imageUrl" />
+  </div>
+  <img *ngIf="blogForm.value.imageUrl" [src]="blogForm.value.imageUrl" alt="" />
+  <div class="form-group">
     <label for="content">Created by</label>
     <select class="form-control" formControlName="createdBy">
       <option value="user">User</option>

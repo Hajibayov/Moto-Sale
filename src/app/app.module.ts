@@ -51,6 +51,7 @@ import { ClientsComponent } from './home-page/clients/clients.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { AddBlogsComponent } from './home-page/add-blogs/add-blogs.component';
+import { AllBlogsComponent } from './all-blogs/all-blogs.component';
 export const CUSTOM_DATE_FORMAT = {
   parse: {
     dateInput: 'DD.MM.YYYY',
@@ -90,6 +91,7 @@ export const CUSTOM_DATE_FORMAT = {
     CollectionComponent,
     ClientsComponent,
     AddBlogsComponent,
+    AllBlogsComponent,
   ],
   imports: [
     BrowserModule,
