@@ -9,6 +9,7 @@ import { HomeService } from '../home-page/home.service';
   styleUrls: ['./all-blogs.component.scss'],
 })
 export class AllBlogsComponent implements OnInit {
+  routeName = 'Blogs';
   id: string = '';
   blog: any;
   blogs: Blog[] = [];

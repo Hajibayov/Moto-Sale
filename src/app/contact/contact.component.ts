@@ -7,6 +7,7 @@ import * as AOS from 'aos';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+  routeName = 'Contact';
   ngOnInit(): void {
     AOS.init();
   }

@@ -7,6 +7,7 @@ import * as AOS from 'aos';
   styleUrls: ['./wishlist.component.scss'],
 })
 export class WishlistComponent {
+  routeName = 'Wishlist';
   ngOnInit(): void {
     AOS.init();
   }

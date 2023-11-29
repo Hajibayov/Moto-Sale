@@ -52,6 +52,9 @@ import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { AddBlogsComponent } from './home-page/add-blogs/add-blogs.component';
 import { AllBlogsComponent } from './all-blogs/all-blogs.component';
+import { NgDynamicBreadcrumbModule } from 'ng-dynamic-breadcrumb';
+import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+
 export const CUSTOM_DATE_FORMAT = {
   parse: {
     dateInput: 'DD.MM.YYYY',
@@ -92,6 +95,7 @@ export const CUSTOM_DATE_FORMAT = {
     ClientsComponent,
     AddBlogsComponent,
     AllBlogsComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,
@@ -109,6 +113,7 @@ export const CUSTOM_DATE_FORMAT = {
     CarouselModule,
     ButtonModule,
     FormsModule,
+    NgDynamicBreadcrumbModule,
   ],
   providers: [
     {

@@ -89,5 +89,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatTreeModule,
     MatMenuModule,
   ],
+  declarations: [
+  ],
 })
 export class MaterialModule {}

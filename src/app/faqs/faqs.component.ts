@@ -7,6 +7,7 @@ import * as AOS from 'aos';
   styleUrls: ['./faqs.component.scss'],
 })
 export class FaqsComponent {
+  routeName = 'Faqs';
   ngOnInit(): void {
     AOS.init();
   }

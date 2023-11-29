@@ -25,7 +25,7 @@
       #slickModal="slick-carousel"
       [config]="slideConfig"
     >
-      <div ngxSlickItem *="let slide of slides" class="slide">
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
         <div class="box">
           <div
             data-aos="fade-right"

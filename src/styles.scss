@@ -150,3 +150,10 @@ mat-form-field:hover {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
   padding: 15px;
 }
+.custom-bread-crumb {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.custom-bread-crumb a {
+  font-family: "Montserrat" !important;
+}

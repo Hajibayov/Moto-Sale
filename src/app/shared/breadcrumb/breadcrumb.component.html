@@ -1,0 +1,19 @@
+<div class="background">
+  <div class="row">
+    <h1 class="text-center p-0 w-50">
+      {{ name }}
+    </h1>
+  </div>
+  <div class="about-us w-100">
+    <div class="route">
+      <mat-icon class="home">home</mat-icon>
+      <p class="m-0">Home</p>
+      <mat-icon class="orange">arrow_right</mat-icon>
+      <app-ng-dynamic-breadcrumb
+        [bgColor]="'#fff'"
+        [fontSize]="'12px'"
+        [fontColor]="'#000'"
+      ></app-ng-dynamic-breadcrumb>
+    </div>
+  </div>
+</div>

@@ -1,32 +1,6 @@
-
 <div class="container-fluid p-0">
-  <div class="background">
-    <div class="row">
-      <h1
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="300"
-        class="about-us w-100"
-        class="text-center p-0 w-50"
-      >
-        Contact
-      </h1>
-    </div>
-    <div
-      data-aos="fade-right"
-      data-aos-duration="1000"
-      data-aos-delay="400"
-      class="about-us w-100"
-    >
-      <div class="route">
-        <mat-icon class="home">home</mat-icon>
-        <p class="m-0">Home</p>
-        <mat-icon class="orange">arrow_right</mat-icon>
-        <p class="m-0">Contact</p>
-      </div>
-    </div>
-  </div>
+  <app-breadcrumb [name]="routeName"></app-breadcrumb>
   <div class="row">
-  <app-form></app-form>
-</div>
+    <app-form></app-form>
+  </div>
 </div>
