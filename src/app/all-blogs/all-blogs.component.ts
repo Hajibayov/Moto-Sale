@@ -11,12 +11,18 @@ import { HomeService } from '../home-page/home.service';
 export class AllBlogsComponent implements OnInit {
   id: string = '';
   blog: any;
+  blogs: Blog[] = [];
   constructor(
     private route: ActivatedRoute,
     private homeService: HomeService
   ) {}
 
   ngOnInit(): void {
+    this.homeService.getBlogs().subscribe((res) => {
+      console.log(res);
+      this.blogs = res;
+    });
+
     this.route.queryParams.subscribe((res) => {
       this.id = res['blogId'];
       if (this.id) {

@@ -1,1 +1,43 @@
-<p>all-blogs works!</p>
+<div class="container-fluid p-0">
+  <div class="background">
+    <div class="row">
+      <h1 class="text-center p-0 w-50">Blogs</h1>
+    </div>
+    <div class="container about-us w-100">
+      <div class="route">
+        <mat-icon class="home">home</mat-icon>
+        <p class="m-0">Home</p>
+        <mat-icon class="orange">arrow_right</mat-icon>
+        <p class="m-0">Blogs</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="blogs-background">
+  <div class="container">
+    <div class="row">
+      <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened>
+          <div class="drawer-title">
+            <h4>Recent Posts</h4>
+          </div>
+          <div class="recent-posts" *ngFor="let b of blogs.slice(-3)">
+            <div>
+              <img class="posts-img" [src]="b.imageUrl" alt="" />
+              <div>
+                <h3 class="text-center">{{ b.name }}</h3>
+                <div class="text-center">
+                  <span>{{ b.createdBy | titlecase }}</span>
+                  <span> {{ b.createdAt | date : "mediumDate" }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-drawer>
+        <mat-drawer-content>
+          <div class="blog-content"></div>
+        </mat-drawer-content>
+      </mat-drawer-container>
+    </div>
+  </div>
+</div>

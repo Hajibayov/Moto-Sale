@@ -1,49 +1,49 @@
 <div class="container">
   <div class="team">
-  <div class="row header">
-    <h1
-      data-aos="fade-right"
-      data-aos-duration="1000"
-      data-aos-delay="300"
-      class="text-center text back-text"
-      class="text-center text back-text"
+    <div class="row header">
+      <h1
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="300"
+        class="text-center text back-text"
+        class="text-center text back-text"
+      >
+        Our Team
+      </h1>
+      <h3
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+        class="text-center text back-text"
+        class="text-center text back-overlay"
+      >
+        Our Team
+      </h3>
+    </div>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
     >
-      Our Team
-    </h1>
-    <h3
-      data-aos="fade-right"
-      data-aos-duration="1000"
-      data-aos-delay="400"
-      class="text-center text back-text"
-      class="text-center text back-overlay"
-    >
-      Our Team
-    </h3>
-  </div>
-  <ngx-slick-carousel
-    class="carousel"
-    #slickModal="slick-carousel"
-    [config]="slideConfig"
-  >
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-      <div class="box">
-        <div
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          data-aos-delay="300"
-          class="card"
-        >
-          <div class="imgBx">
-            <img src="{{ slide.img }}" alt="images" />
-          </div>
-          <div class="details">
-            <h2 class="text">
-              {{ slide.detail }}<br /><span>{{ slide.position }}</span>
-            </h2>
+      <div ngxSlickItem *="let slide of slides" class="slide">
+        <div class="box">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            class="card"
+          >
+            <div class="imgBx">
+              <img src="{{ slide.img }}" alt="images" />
+            </div>
+            <div class="details">
+              <h2 class="text">
+                {{ slide.detail }}<br /><span>{{ slide.position }}</span>
+              </h2>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </ngx-slick-carousel>
-</div>
+    </ngx-slick-carousel>
+  </div>
 </div>
