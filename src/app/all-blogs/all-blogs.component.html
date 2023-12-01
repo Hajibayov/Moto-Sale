@@ -1,3 +1,42 @@
 <div class="container-fluid p-0">
   <app-breadcrumb [name]="routeName"></app-breadcrumb>
+  <div class="container p-0">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="sidebar">
+          <aside>
+            <div class="sidebar-header">
+              <h3>RECENT POSTS</h3>
+            </div>
+            <div *ngFor="let blog of blogs.slice(-3)">
+              <div class="sidebar-content text-center">
+                <img class="w-100" [src]="blog.imageUrl" alt="" />
+                <p>{{ blog.name }}</p>
+                <span>{{ blog.createdBy | titlecase }}</span>
+                <span>{{ blog.createdAt | date : "mediumDate" }}</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div *ngIf="currentBlog" class="col-md-9">
+        <div class="blogs">
+          <div class="blogs-header">
+            <div class="blogs-date text-center">
+              <p>{{ currentBlog.createdAt | date : "dd" }}</p>
+              <p>{{ currentBlog.createdAt | date : "LLL" }}</p>
+            </div>
+            <div class="blogs-title">
+              <h2>
+                {{ currentBlog.name }}
+              </h2>
+              <fa-icon [icon]="faPenToSquare"></fa-icon>
+              <span>{{ currentBlog.createdBy | titlecase }}</span>
+            </div>
+          </div>
+          <div class="blogs-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

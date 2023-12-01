@@ -1,103 +1,67 @@
 .container-fluid {
   background-color: #eee;
-  padding: 50px auto;
+  padding-bottom: 0;
 }
-.background {
-  background-image: url("https://demo.yolotheme.com/motor/wp-content/uploads/2016/02/page-title-bg1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  padding: 250px auto !important;
+.container {
+  margin: 50px auto 0 auto;
 }
-h1 {
-  font-family: "Montserrat Bold";
-  font-size: 50px;
-  text-transform: uppercase;
-  margin: 120px auto;
-  color: #fff;
-}
-.route {
-  padding: 10px 25px;
+.sidebar,
+.blogs {
   background-color: #fff;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: -5%;
+  position: relative;
+  height: 100%;
 }
-.about-us {
-  display: flex;
-  justify-content: center;
-}
-.home {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
-p {
-  font-family: "Montserrat";
-  font-size: 12px;
-  cursor: pointer;
-}
-.orange {
-  color: rgba(255, 181, 53, 0.9);
-}
-.blogs-background {
-  background-color: #eee;
-}
-mat-drawer-container {
-  margin: 50px 0;
-  padding: 0;
-}
-mat-drawer {
-  width: 25%;
-  padding: 25px 20px 30px 20px;
-}
-mat-drawer::before {
+.sidebar::before {
   content: "";
   width: 2px;
   height: 15px;
   background-color: #ffa814;
   position: absolute;
-  top: 0px;
+  top: 0;
+  left: 20px;
 }
-
-mat-drawer-content {
-  background-color: #eee;
+.sidebar aside {
+  padding: 25px 20px 30px 20px;
 }
-.drawer-title h4 {
+.sidebar-header h3 {
   font-family: "Montserrat";
+  font-weight: bold;
   font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-  margin-bottom: 35px;
 }
-
-.posts-img {
-  width: 100%;
-  height: 150px;
+.sidebar-content {
+  padding-bottom: 35px;
 }
-
-.recent-posts h3 {
+.sidebar-content p {
   font-family: "Montserrat";
   font-weight: bold;
-  color: #000;
   font-size: 15px;
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
-.recent-posts span {
+.sidebar-content img {
+  padding-bottom: 20px;
+}
+.sidebar-content span {
   font-family: "Montserrat";
-  color: #000;
   font-size: 14px;
   margin-right: 10px;
-  font-weight: normal;
 }
-.blog-content {
-  height: 100%;
-  background-color: #fff;
-  margin-left: 30px;
+
+.blogs {
+  padding: 50px 30px;
+}
+
+.blogs-header {
+  position: relative;
+}
+.blogs-date {
+  position: absolute;
+  left: 0;
+  font-size: 24px;
+  padding: 10px 20px 5px 20px;
+  border: 2px solid #ffa814;
+}
+.blogs-date p {
+  color: #000;
+}
+.blogs-title {
+  padding-left: 95px;
 }
