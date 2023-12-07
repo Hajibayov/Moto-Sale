@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Blog } from '../models/blog.model';
-import { HomeService } from '../home-page/home.service';
+import { Blog } from '../../models/blog.model';
+import { HomeService } from '../home.service';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-all-blogs',

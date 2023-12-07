@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../home.service';
 import { MatDialog } from '@angular/material/dialog';
-import { ViewProductDialogComponent } from 'src/app/view-product-dialog/view-product-dialog.component';
+import { ViewProductDialogComponent } from 'src/app/dialogs/view-product-dialog/view-product-dialog.component';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-cards',

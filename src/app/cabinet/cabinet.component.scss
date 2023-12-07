@@ -1,0 +1,23 @@
+.cabinet__background {
+  height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/images/Frame\ 111.png");
+  padding: 0 auto !important;
+}
+.cabinet__sidebar {
+  width: 17%;
+  position: relative;
+}
+.cabinet__header {
+  width: 83%;
+  position: relative;
+  background-color: #fff;
+  // border-top-right-radius: 29px;
+  // border-bottom-right-radius: 29px;
+}
+.header__background {
+  background-color: rgba(205, 205, 205, 0.09);
+  border-radius: 29px;
+}

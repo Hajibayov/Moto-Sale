@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { MessageDialogComponent } from '../message-dialog/message-dialog.component';
+import { MessageDialogComponent } from '../../dialogs/message-dialog/message-dialog.component';
 
 @Component({
   selector: 'app-form',
