@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
-import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
-import { faCodePullRequest } from '@fortawesome/free-solid-svg-icons';
-import { faFile } from '@fortawesome/free-regular-svg-icons';
+import { faBox } from '@fortawesome/free-solid-svg-icons';
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,11 +11,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent {
-  faHouse = faHouse;
-  faClock = faClock;
-  faCreditCard = faCreditCard;
-  faCodePullRequest = faCodePullRequest;
-  faFile = faFile;
+  faBox = faBox;
+  faNewspaper = faNewspaper;
+  faRightFromBracket = faRightFromBracket;
+  faUsers = faUsers;
   isSidebarOpen = true;
   isOpen = false;
 

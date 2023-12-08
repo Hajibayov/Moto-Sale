@@ -7,18 +7,19 @@ mat-drawer-container {
 }
 
 mat-nav-list span {
-  font-family: "Open Sans";
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 16px;
   line-height: 22px;
-
   color: #909090;
 }
 mat-drawer {
   width: 100%;
 }
-
+span {
+  padding-left: 10px;
+}
 .icon {
   display: flex;
   justify-content: center;
@@ -29,32 +30,12 @@ mat-drawer {
 }
 
 fa-icon {
-  color: #7ed794;
-}
-h1 {
-  margin: 0 !important;
-}
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo img {
-  width: 48px;
-  height: 48px;
-}
-.logo-title {
-  font-family: "Alatsi";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 41px;
-  color: rgba(140, 140, 140, 0.8);
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+  color: #ffb535;
 }
 
 .mat-mdc-list-item:hover,
 .mat-mdc-list-item:focus {
-  background: #7ed794;
+  background: #ffb535;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 }
@@ -67,7 +48,7 @@ h1 {
   color: #fff;
 }
 .mat-mdc-list-item:active {
-  background: #7ed794;
+  background: #ffb535;
   border-radius: 5px;
 }
 .mat-mdc-list-item:active fa-icon {
@@ -80,7 +61,7 @@ a {
   text-decoration: none;
 }
 .mat_active {
-  background: #7ed794;
+  background: #ffb535;
   border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   span {
@@ -94,198 +75,4 @@ img {
   display: inline-block;
   width: 60px;
   height: 60px;
-}
-nav {
-  width: 100%;
-  background: #fff;
-  padding: 7px 0;
-}
-.container {
-  max-width: 1500px;
-  width: 100%;
-  margin: 0 auto;
-}
-.navbar {
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.navbar .nav-content {
-  display: flex;
-  text-align: center;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  align-items: center;
-  justify-content: space-between !important;
-}
-.navbar .menu_items {
-  display: flex;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-}
-
-.navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.3em;
-  text-decoration: none;
-  font-family: "Alatsi";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 44px;
-  color: rgba(140, 140, 140, 0.8);
-  letter-spacing: 0.1rem;
-}
-.navbar .navbar-link a {
-  text-decoration: none;
-  font-family: "Varela Round", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  padding-right: 25px;
-  color: #909090;
-}
-.navbar-logo {
-  flex: 1;
-  user-select: none;
-  align-self: center;
-}
-
-.navbar-button {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 22px;
-  padding: 9px 47.5px;
-  margin: 0 auto;
-  border: none;
-  border-radius: 2%;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
-.menu {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  padding: 0;
-  outline: none;
-}
-.line {
-  fill: none;
-  stroke: black;
-  stroke-width: 6;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.line1 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
-}
-.line2 {
-  stroke-dasharray: 60 60;
-  stroke-width: 6;
-}
-.line3 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
-}
-.opened .line1 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
-}
-.opened .line2 {
-  stroke-dasharray: 1 60;
-  stroke-dashoffset: -30;
-  stroke-width: 6;
-}
-.opened .line3 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
-}
-
-.container a {
-  color: #fff;
-  text-decoration: none;
-  position: relative;
-  z-index: 0;
-  cursor: pointer;
-}
-.menu_items {
-  padding-top: 8px;
-}
-
-.navbar-brand span {
-  padding-left: 10px;
-}
-
-.navbar {
-  display: none;
-}
-.navbar-menu {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-@media (max-width: 993px) {
-  .navbar {
-    display: block;
-  }
-  .height {
-    display: none;
-  }
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 0;
-  }
-
-  .navbar-logo {
-    flex: none;
-  }
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-link {
-    display: none;
-    width: 100%;
-  }
-  .navbar-link a {
-    padding: 0;
-  }
-
-  .navbar-button {
-    display: none;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .active {
-    opacity: 1;
-    display: block;
-    padding: 10px 0;
-  }
-  .active:hover {
-    background: #7ed794;
-    border-radius: 29px;
-  }
-  .active:hover fa-icon {
-    color: #fff;
-  }
-  .active:hover span {
-    color: #fff;
-  }
 }

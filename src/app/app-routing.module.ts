@@ -12,6 +12,8 @@ import { HomeComponent } from './home-page/home/home.component';
 import { CabinetModule } from './cabinet/cabinet.module';
 import { CabinetComponent } from './cabinet/cabinet.component';
 import { ProductsComponent } from './cabinet/products/products.component';
+import { BlogsComponent } from './cabinet/blogs/blogs.component';
+import { EmployeesComponent } from './cabinet/employees/employees.component';
 
 const appRoute: Routes = [
   HomePageModule.childRoutes([
@@ -86,6 +88,8 @@ const appRoute: Routes = [
   ]),
   CabinetModule.childRoutes([
     { path: 'Cabinet', component: ProductsComponent },
+    { path: 'Blogss', component: BlogsComponent },
+    { path: 'Employees', component: EmployeesComponent },
   ]),
 ];
 

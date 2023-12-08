@@ -9,9 +9,22 @@ import { SidebarComponent } from './fixed-part/sidebar/sidebar.component';
 import { HeaderComponent } from './fixed-part/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductsComponent } from './products/products.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { NewProductDialogComponent } from './new-product-dialog/new-product-dialog.component';
+import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
 
 @NgModule({
-  declarations: [CabinetComponent, SidebarComponent, HeaderComponent, ProductsComponent],
+  declarations: [
+    CabinetComponent,
+    SidebarComponent,
+    HeaderComponent,
+    ProductsComponent,
+    BlogsComponent,
+    EmployeesComponent,
+    NewProductDialogComponent,
+    LoadingSpinnerComponent,
+  ],
   imports: [
     CommonModule,
     MaterialModule,

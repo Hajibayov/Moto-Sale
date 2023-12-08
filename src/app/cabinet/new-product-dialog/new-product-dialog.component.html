@@ -1,0 +1,49 @@
+<div mat-dialog-content>
+  <fa-icon mat-dialog-close class="dialog-close" [icon]="faXmark"></fa-icon>
+  <div>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="form-group mb-3">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" formControlName="name" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" formControlName="description" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="imageUrl">Image url</label>
+        <input type="text" class="form-control" formControlName="imageUrl" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="brand">Brand</label>
+        <input type="number" class="form-control" formControlName="brandId" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="category">Category</label>
+        <input type="number" class="form-control" formControlName="categoryId" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="color">Color</label>
+        <input type="text" class="form-control" formControlName="color" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="name">Stock Quantity</label>
+        <input
+          type="number"
+          class="form-control"
+          formControlName="stock_quantity"
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="name">Price</label>
+        <input type="text" class="form-control" formControlName="price" />
+      </div>
+      <button *ngIf="data" mat-dialog-close class="btn btn-primary w-100" type="submit">
+        Edit
+      </button>
+      <button *ngIf="!data" mat-dialog-close class="btn btn-primary w-100" type="submit">
+        Create
+      </button>
+    </form>
+  </div>
+</div>

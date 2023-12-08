@@ -20,16 +20,16 @@
         <a
           class="mt-2"
           mat-list-item
-          [routerLink]="['/cabinet']"
+          routerLink="Cabinet"
           routerLinkActive="mat_active"
           [routerLinkActiveOptions]="{ exact: true }"
         >
           <div class="list">
             <div class="icon">
-              <fa-icon [icon]="faHouse"></fa-icon>
+              <fa-icon [icon]="faBox"></fa-icon>
             </div>
             <a>
-              <span mat-line class="pl-3">Home</span>
+              <span mat-line class="pl-3">Products</span>
             </a>
           </div>
         </a>
@@ -37,15 +37,15 @@
         <a
           class="mt-2"
           mat-list-item
-          [routerLink]="['/packages']"
+          routerLink="Employees"
           routerLinkActive="mat_active"
         >
           <div class="list">
             <div class="icon">
-              <fa-icon [icon]="faClock"></fa-icon>
+              <fa-icon [icon]="faUsers"></fa-icon>
             </div>
             <a>
-              <span mat-line class="pl-3">Packages</span>
+              <span mat-line class="pl-3">Employees</span>
             </a>
           </div>
         </a>
@@ -53,15 +53,15 @@
         <a
           class="mt-2"
           mat-list-item
-          [routerLink]="['/requests']"
+          routerLink="Blogss"
           routerLinkActive="mat_active"
         >
           <div class="list">
             <div class="icon">
-              <fa-icon [icon]="faCodePullRequest"></fa-icon>
+              <fa-icon [icon]="faNewspaper"></fa-icon>
             </div>
             <a>
-              <span mat-line class="pl-3">Requests</span>
+              <span mat-line class="pl-3">Blogs</span>
             </a>
           </div>
         </a>
@@ -69,26 +69,15 @@
         <a
           class="mt-2"
           mat-list-item
-          [routerLink]="['/payments']"
+          routerLink="Home"
           routerLinkActive="mat_active"
         >
           <div class="list">
             <div class="icon">
-              <fa-icon [icon]="faCreditCard"></fa-icon>
+              <fa-icon [icon]="faRightFromBracket"></fa-icon>
             </div>
             <a>
-              <span mat-line class="pl-3">Payments</span>
-            </a>
-          </div>
-        </a>
-
-        <a class="mt-2" mat-list-item>
-          <div class="list">
-            <div class="icon">
-              <fa-icon [icon]="faFile"></fa-icon>
-            </div>
-            <a routerLinkActive="active" (click)="navigateDoc()">
-              <span mat-line class="pl-3">Documentation</span>
+              <span mat-line class="pl-3">Exit</span>
             </a>
           </div>
         </a>
@@ -96,82 +85,3 @@
     </mat-drawer>
   </mat-drawer-container>
 </div>
-<nav class="navbar">
-  <div class="container highlightTextOut">
-    <ul class="nav-content">
-      <li class="navbar-logo" #logo>
-        <a class="navbar-brand" href="#">
-          <img src="/assets/images/DoxMake2.png" />
-          <span>DoxMake</span>
-        </a>
-      </li>
-      <li class="navbar-toggle">
-        <button
-          class="menu"
-          (click)="toggleMenu()"
-          [class.opened]="isOpen"
-          aria-label="Main Menu"
-          #toggle
-        >
-          <svg
-            class="navbar__icon"
-            width="50"
-            height="50"
-            viewBox="0 0 100 100"
-          >
-            <path
-              class="line line1"
-              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
-            />
-            <path class="line line2" d="M 20,50 H 80" />
-            <path
-              class="line line3"
-              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
-            />
-          </svg>
-        </button>
-      </li>
-      <ul class="menu_items" #menu_items>
-        <li #menu class="navbar-link" [class.active]="isOpen">
-          <!-- {{'HOME.HEADER' | translate}} -->
-          <div class="navbar-menu">
-            <a [routerLink]="['/cabinet']">
-              <fa-icon [icon]="faHouse"></fa-icon>
-
-              <span mat-line class="pl-3">Home</span>
-            </a>
-          </div>
-        </li>
-        <li #menu1 class="navbar-link" [class.active]="isOpen">
-          <div class="navbar-menu">
-            <a [routerLink]="['/packages']">
-              <fa-icon [icon]="faClock"></fa-icon>
-
-              <span mat-line class="pl-3">Packages</span>
-            </a>
-          </div>
-        </li>
-        <li #menu class="navbar-link" [class.active]="isOpen">
-          <a [routerLink]="['/requests']">
-            <fa-icon [icon]="faCodePullRequest"></fa-icon>
-
-            <span mat-line class="pl-3">Requests</span>
-          </a>
-        </li>
-        <li class="navbar-link" [class.active]="isOpen">
-          <a [routerLink]="['/payments']">
-            <fa-icon [icon]="faCreditCard"></fa-icon>
-
-            <span mat-line class="pl-3">Payments</span>
-          </a>
-        </li>
-        <li class="navbar-link" [class.active]="isOpen">
-          <a>
-            <fa-icon [icon]="faFile"></fa-icon>
-            <span mat-line class="pl-3">Documentation</span>
-          </a>
-        </li>
-      </ul>
-    </ul>
-  </div>
-</nav>
