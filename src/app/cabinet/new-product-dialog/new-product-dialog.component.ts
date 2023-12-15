@@ -20,11 +20,15 @@ export class NewProductDialogComponent implements OnInit {
   formData: any;
   myForm: any;
   id: number;
+  brandList: any;
+  categoriesList: any;
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private cabinetService: CabinetService
   ) {}
   ngOnInit(): void {
+    this.getBrands();
+    this.getCategories();
     if (this.data) {
       this.formData = this.data.form;
       console.log(this.formData);
@@ -106,5 +110,18 @@ export class NewProductDialogComponent implements OnInit {
       );
     }
     window.location.reload();
+  }
+
+  getBrands() {
+    this.cabinetService.getBrands().subscribe((res) => {
+      console.log(res.data);
+      this.brandList = res.data;
+    });
+  }
+  getCategories() {
+    this.cabinetService.getCategories().subscribe((res) => {
+      console.log(res.data);
+      this.categoriesList = res.data;
+    });
   }
 }

@@ -1,1 +1,97 @@
-<p>employees works!</p>
+<div class="text-center h-100" *ngIf="showSpinner">
+    <app-spinner></app-spinner>
+  </div>
+  <div *ngIf="!showSpinner" class="table-content">
+    <button class="btn btn-primary" (click)="onCreate()">Create</button>
+    <table mat-table [dataSource]="dataSource" class="">
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="table-header">Name</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="table-row-text">{{ element.name }}</span>
+        </td>
+      </ng-container>
+  
+      <!-- Surname Column -->
+      <ng-container matColumnDef="surname">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="table-header">Surname</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="table-row-text">{{ element.surname }}</span>
+        </td>
+      </ng-container>
+  
+      <!-- Role Column -->
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="table-header">Role</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="table-row-text">{{ element.role }}</span>
+        </td>
+      </ng-container>
+  
+      <!-- Phone Column -->
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="table-header">Phone</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="table-row-text">{{ element.phone }}</span>
+        </td>
+      </ng-container>
+  
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="table-header">Email</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="table-row-text">{{ element.email }}</span>
+        </td>
+      </ng-container>
+
+  
+      <!-- operation Column -->
+      <ng-container matColumnDef="operation">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <img
+            class="options-menu-trigger"
+            src="assets/images/icons/menu-dots-vertical.svg"
+            alt=""
+            [matMenuTriggerFor]="optionsMenu"
+          />
+          <mat-menu class="table-options-menu" #optionsMenu="matMenu">
+            <button mat-menu-item (click)="onEdit(element)">
+              <img
+                class="pe-2"
+                src="assets/images/icons/pencil.svg"
+                alt=""
+              /><span>Edit</span>
+            </button>
+            <button mat-menu-item (click)="onDelete(element.id)">
+              <img class="pe-2" src="assets/images/icons/trash.svg" alt="" /><span
+                >Delete</span
+              >
+            </button>
+          </mat-menu>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator
+      [pageSizeOptions]="[10, 50, 100]"
+      [pageSize]="pageSize"
+      [length]="total"
+      (page)="pageChanged($event)"
+    >
+    </mat-paginator>
+  </div>
+  

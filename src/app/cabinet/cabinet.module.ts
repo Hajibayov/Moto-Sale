@@ -13,6 +13,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { NewProductDialogComponent } from './new-product-dialog/new-product-dialog.component';
 import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
+import { NewBlogComponent } from './new-blog/new-blog.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinn
     EmployeesComponent,
     NewProductDialogComponent,
     LoadingSpinnerComponent,
+    NewBlogComponent,
   ],
   imports: [
     CommonModule,

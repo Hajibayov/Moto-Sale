@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductVM } from './productVM.model';
 import { CabinetService } from '../cabinet.service';
-import { CommonFilter } from '../product-filter.model';
+import { CommonFilter } from '../common-filter.model';
 import { MatPaginator } from '@angular/material/paginator';
 import { ResponseListTotal } from 'src/app/models/response-list-total.model';
 import { MatDialog } from '@angular/material/dialog';
@@ -91,6 +91,7 @@ export class ProductsComponent implements OnInit {
   }
 
   onDelete(id: number) {
+    console.log("test");
     this.showSpinner = true;
     this.cabinetService.deleteProducts(id).subscribe((res) => {
       alert(res.status.message);

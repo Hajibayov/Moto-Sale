@@ -1,4 +1,5 @@
 export class ProductVM {
+  public id: number;
   public name: string;
   public brand: string;
   public category: string;
@@ -7,6 +8,7 @@ export class ProductVM {
   public price: number;
 
   constructor(
+    id: number,
     name: string,
     brand: string,
     category: string,
@@ -14,6 +16,7 @@ export class ProductVM {
     stock_quantity: number,
     price: number
   ) {
+    this.id = id;
     this.name = name;
     this.brand = brand;
     this.category = category;

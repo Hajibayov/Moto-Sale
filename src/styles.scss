@@ -128,9 +128,8 @@ mat-form-field:hover {
   border-radius: 10px !important;
 }
 .mdc-dialog .mdc-dialog__content {
-  padding: 40px !important;
+  position: relative !important;
 }
-
 /* Font color */
 ::ng-deep input.mat-input-element {
   color: white;

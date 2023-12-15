@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageModule } from './home-page/home-page.module';
 import { NewsletterComponent } from './home-page/newsletter/newsletter.component';
+import { NewEmployeeDialogComponent } from './cabinet/new-employee-dialog/new-employee-dialog.component';
 
 export const CUSTOM_DATE_FORMAT = {
   parse: {
@@ -37,6 +38,7 @@ export const CUSTOM_DATE_FORMAT = {
 @NgModule({
   declarations: [
     AppComponent,
+    NewEmployeeDialogComponent,
 
   ],
   imports: [
